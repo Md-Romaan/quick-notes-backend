@@ -2,7 +2,7 @@
 
 This is the backend repository for the Quick Notes App. It is built using Node.js, Express.js, and MongoDB. This service handles user registration, authentication, and CRUD operations for notes.
 
-[a link](https://github.com/Md-Romaan/quick-notes-frontend)
+[Front-end link](https://github.com/Md-Romaan/quick-notes-frontend)
 
 ## Table of Contents
 
