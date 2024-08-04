@@ -103,7 +103,6 @@ const deleteNote = async (req, res) => {
 
         const { id } = req.params;
         const deletedNote = await Note.deleteOne({ _id: id });
-        console.log(deletedNote);
 
         if (!deleteNote) {
             return res.status(400).json({ success: false, message: "Note not deleted!" })

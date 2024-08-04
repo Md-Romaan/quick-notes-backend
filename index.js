@@ -4,7 +4,6 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRouter from "./src/routers/user.router.js";
 import connectDB from "./src/db/connectDB.js";
-import User from "./src/models/user.model.js";
 import noteRouter from "./src/routers/note.router.js";
 
 const app = express();
@@ -29,13 +28,11 @@ app.get("/", async (req, res) => {
     }
 });
 
-//    /user
+//  routes api
 app.use("/user", userRouter)
 app.use("/note", noteRouter)
 
-// app.get("/", (req, res)=>{
 
-// })
 
 
 const port = process.env.PORT;
