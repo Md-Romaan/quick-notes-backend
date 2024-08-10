@@ -18,10 +18,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+
 //end points
 app.get("/", async (req, res) => {
     try {
-
+        
         return res.status(200).json({ success: true, message: "Server running...." })
     } catch (error) {
         console.log(error);
