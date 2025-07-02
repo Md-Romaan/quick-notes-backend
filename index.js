@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import userRouter from "./src/routers/user.router.js";
 import connectDB from "./src/db/connectDB.js";
 import noteRouter from "./src/routers/note.router.js";
+import resumeRouter from "./src/routers/resume.router.js";
 
 const app = express();
 
@@ -22,7 +23,7 @@ app.use(cookieParser());
 //end points
 app.get("/", async (req, res) => {
     try {
-        
+
         return res.status(200).json({ success: true, message: "Server running...." })
     } catch (error) {
         console.log(error);
@@ -32,8 +33,7 @@ app.get("/", async (req, res) => {
 //  routes api
 app.use("/user", userRouter)
 app.use("/note", noteRouter)
-
-
+app.use("/resume", resumeRouter);
 
 
 const port = process.env.PORT;
